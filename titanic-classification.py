@@ -120,11 +120,14 @@ class LogisticRegression:
             metric_graph["accuracy"].append(metrics["accuracy"])
             learning_rate *= learning_rate_decay
         
-        plt.plot(metric_graph["loss"])
-        plt.title("Loss")
-        plt.show()
+        #plt.plot(metric_graph["loss"])
+        #plt.title("Loss")
+        #plt.show()
         plt.title("Accuracy")
+        plt.xlabel("EPOCH")
+        plt.ylabel("PERCENTAGE")
         plt.plot(metric_graph["accuracy"])
+        plt.savefig("accuracy.png")
         plt.show()
         
 
